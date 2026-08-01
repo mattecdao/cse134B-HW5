@@ -37,17 +37,43 @@ body{
             }
     }
     > footer{
-            > form textarea{
-                width: 100%;
-                background-color: var(--paper);    
-                color: var(--ink);
-            }
-            padding: var(--space-2);
+        > form textarea{
+            width: 100%;
+            background-color: var(--paper);    
+            color: var(--ink);
         }
+        padding: var(--space-2);
+    }
 }
+button{
+        background-color: var(--paper);
+        color: var(--ink);
+        border: var(--border);
+        padding: var(--space-1) var(--space-2);
+        font-size: var(--text-m);
+    }
 @media(prefers-reduced-motion: no-preference)
 {
     @view-transition{
         navigation:auto;
     }
+}
+cat-fact[data-state = "loading"]{
+    display: block;
+    text-align: center;
+    font-size: var(--text-xl);
+    color: var(--ink);
+}
+cat-fact[data-state = "error"]{
+    display: block;
+    text-align: center;
+    font-size: var(--text-l);
+    color: var(--accent);
+}
+cat-fact[data-state = "finished"]{
+    display: block;
+    text-align: center;
+    font-size: var(--text-m);
+    color: var(--ink);
+    background-color: var(--finished);
 }

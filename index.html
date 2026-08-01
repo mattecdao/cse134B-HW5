@@ -7,6 +7,14 @@
       <meta name="color-scheme" content="light dark">
       <title>Home - GeneSite</title>
       <link rel = "stylesheet" href = "styles/index.css"/> 
+      <noscript>
+        <style>
+          form:has(input[name="theme"])
+          {
+            display:none;
+          }
+        </style>
+      </noscript>
     </head>
     <body>
 
@@ -23,20 +31,6 @@
         <li><a href="future.html">Future</a></li>
       </ul>
     </nav>
-
-    <noscript>
-      <style>
-        form:has(input[name="theme"])
-        {
-          display:none;
-        }
-        section cat-fact
-        {
-          
-          display:none;
-        }
-      </style>
-    </noscript>
       <main>
         <article>
         
@@ -60,14 +54,13 @@
           <noscript>
             <p>This webpage now requires JavaScript for theme selection to work! And you do have JavaScript off!</p>
           </noscript>
-          <h3>First Of Course, A Random Cat Fact Every 60 Seconds:</h3>
+          <h2>First Of Course, A Random Cat Fact Every 60 Seconds or On Demand:</h2>
           <template id = "cat-fact-template">
-            <form>
-              <button type = "button" command = "start" commandfor = "cat-fact">Start</button>
-            </form>
+            <p></p>
+              <button type = "button" command = "--start">Start</button>
           </template>
             
-          <cat-fact refresh-interval="60"></cat-fact>
+          <cat-fact refresh-interval="60">About 37% of American homes today have at least 1 cat.</cat-fact>
         </section>
         <h2>Introduction</h2>
         <section>

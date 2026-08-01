@@ -30,10 +30,12 @@
         {
           display:none;
         }
+        section cat-fact
+        {
+          
+          display:none;
+        }
       </style>
-      <div class = "no-js">
-        <p>This webpage now requires JavaScript for theme selection to work! And you do have JavaScript off!</p>
-      </div>
     </noscript>
       <main>
         <article>
@@ -50,10 +52,22 @@
               <label for = "system-theme">System/Auto</label>
             </fieldset>
           </form>
-        </section>  
+          <noscript>
+            <p>This webpage now requires JavaScript for theme selection to work! And you do have JavaScript off!</p>
+          </noscript>
+          </section>  
         <section>
+          <noscript>
+            <p>This webpage now requires JavaScript for theme selection to work! And you do have JavaScript off!</p>
+          </noscript>
           <h3>First Of Course, A Random Cat Fact Every 60 Seconds:</h3>
-          
+          <template id = "cat-fact-template">
+            <form>
+              <button type = "button" command = "start" commandfor = "cat-fact">Start</button>
+            </form>
+          </template>
+            
+          <cat-fact refresh-interval="60"></cat-fact>
         </section>
         <h2>Introduction</h2>
         <section>

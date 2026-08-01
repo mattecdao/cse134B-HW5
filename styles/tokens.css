@@ -7,6 +7,7 @@
     --gray: #848484;
     --main: #ffdcdc;
     --accent: #F00;
+    --finished: #689168;
 
     /*spacing*/
     --space-1: 0.5rem;
@@ -38,6 +39,7 @@
         --paper: #111;
         --gray: #242323;
         --main: #171616;
+        --finished: #012a0d;
     }
 }
 /*light theme*/
@@ -48,6 +50,7 @@ html[data-theme = "light"]
     --paper: #fff;
     --gray: #848484;
     --main: #ffdcdc;
+    --finished: #7ea87e;
 }
 /*dark theme*/
 html[data-theme = "dark"]
@@ -57,4 +60,5 @@ html[data-theme = "dark"]
     --paper: #111;
     --gray: #242323;
     --main: #171616;
+    --finished: #012a0d;
 }

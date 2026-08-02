@@ -1,0 +1,32 @@
+---
+import siteData from '../data/site.json';
+
+const currentPath = Astro.url.pathname;
+
+// Normalizes paths for exact build-time comparison
+function isActive(navUrl: string) {
+  if (navUrl === '/') return currentPath === '/';
+  return currentPath.startsWith(navUrl);
+}
+---
+
+<header class="site-header">
+  <nav aria-label="Main Navigation">
+    <ul>
+      {siteData.nav.map((item) => {
+        const active = isActive(item.url);
+        return (
+          <li>
+            <a 
+              href={item.url} 
+              aria-current={active ? "page" : undefined}
+              class={active ? "active" : ""}
+            >
+              {item.name}
+            </a>
+          </li>
+        );
+      })}
+    </ul>
+  </nav>
+</header>

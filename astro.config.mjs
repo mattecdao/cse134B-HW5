@@ -3,6 +3,7 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: "https://cse134b-hw5-genesite.netlify.app",
   integrations: [sitemap({
-    entrylimit: 10000,
-    )],
+    entryLimit: 10000,
+   }),
+  ],
 });

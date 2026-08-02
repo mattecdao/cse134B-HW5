@@ -1,5 +1,27 @@
 # cse134B-HW5
 
+## Local Instructions:
+
+To install locally, please clone my repo with the following code:
+
+```bash
+git clone https://github.com/mattecdao/cse134B-HW5
+```
+and navigate to the folder. Ensure that you have a recent version of Node.js and installed npm.
+
+With `npm`, you have the following commands:
+
+* `npm run dev`
+* `npm run start` (operates same as `dev` command)
+* `npm run build`
+* `npm run preview`
+    
+## Part 1: Theme Picker
+
+For theme picker, I adopted a progressive enhancement approach so that if JavaScript is off, the `@media (prefers-color-theme:)` (i.e. system theme) would take over to the user's preferred theme. Building on top of that, by using JavaScript, the theme is successfully able to change from light to dark to system/auto through the radio buttons. This data attribute is saved to the localStorage to be fetched on each webpage, allowing for the selected theme to be used for each part of the website. Unfortunately, this is where it led to flash of unstyled content (FOUC) issues.
+
+I tried to address FOUC by testing the placement of the script at the beginning, middle, and end of my html code and through the .js file itself. I found that placing at the beginning rids of FOUC but prevents the radio buttons from working. I suspect that this is due to the script requiring html content to be in place. Due to this, I decided the best place to put the script was at the bottom. Furthermore,  
+
 ## Web Component
 
 ### `<cat-fact>`

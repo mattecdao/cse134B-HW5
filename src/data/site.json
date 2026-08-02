@@ -1,0 +1,28 @@
+{
+    "title": "GeneSite",
+    "author": "Matthew",
+    "nav": [
+        {
+            "name": "About Me",
+            "url": "/"
+        },
+        {
+            "name": "Videogames",
+            "url": "/videogames"
+        },
+        {
+            "name": "CS",
+            "url": "/cs"
+        },
+        {
+            "name": "Future",
+            "url": "/future"
+        }
+    ],
+    "currentYear": 2026,
+    "socials": 
+        {
+            "name": "gmail",
+            "url": "example@gmail.com"
+        }
+}

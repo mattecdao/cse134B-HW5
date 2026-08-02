@@ -1,0 +1,36 @@
+---
+import Head from '../components/head.astro';
+import Nav from '../components/nav.astro';
+import Footer from '../components/footer.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title, description } = Astro.props;
+---
+    
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <Head title={title} description={description} />
+  </head>
+  <body>
+    <header>
+    <h1>{title}</h1>
+    <p>{description}</p>
+    </header>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+ 
+      <main id="main-content" tabindex="-1"> 
+        <Nav />
+        <slot />
+      </main>
+      <hr />
+      <Footer />
+        <script src="/js/theme.js" is:inline></script>
+      <script src="/js/cat.js" is:inline></script>
+  </body>
+</html>
+

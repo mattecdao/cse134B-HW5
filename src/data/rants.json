@@ -1,0 +1,17 @@
+[
+    {
+        "id":"instagram",
+        "title":"Instagram - GeneSite",
+        "description":"GeneSite, the site to learn about Geneman and his opinions on Instagram!"   
+    },
+    {
+        "id":"Honey Grahams",
+        "title":"Honey Grahams - GeneSite",
+        "description":"GeneSite, the site to learn about Geneman's thoughts on Honey Grahams!"
+    },
+    {
+        "id":"Anagrams",
+        "title":"Anagrams - GeneSite",
+        "description":"GeneSite, the site to learn about Geneman's complex view of Anagrams!"
+    }
+]

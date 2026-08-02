@@ -1,0 +1,20 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import rants from '../../data/rants.json';
+
+export async function getStaticPaths() {
+  return rants.map((rant) => ({
+    params: { rant: rant.id },
+    props: { rant },
+  }));
+}
+
+const { rant } = Astro.props;
+---
+
+<BaseLayout title={rant.title} description={rant.description}>
+  <article>
+    <h1>{rant.title}</h1>
+    <p>{rant.description}</p>
+  </article>
+</BaseLayout>

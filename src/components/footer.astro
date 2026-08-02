@@ -1,0 +1,14 @@
+---
+import siteData from '../data/site.json';
+---
+
+<footer>
+    <p>Hopefully, whoever is reading this, I hope you are enjoying my webpage of me rambling about things! I am aiming to make this somewhat engaging.</p>
+    <form method = "post">
+    <label for ="tell-me">How am I doing?</label><br />
+    <textarea id = "tell-me" name = "tell-me" rows = 10 cols = 40 placeholder = "Tell me please!"></textarea>
+    <input type = "submit" />
+    </form>
+    @Want to contact me? Contact {siteData.author} at <a href = "https://youtu.be/Aq5WXmQQooo?si=HvJgkaecwSAkCgINz">{siteData.socials.url}</a>
+
+</footer>

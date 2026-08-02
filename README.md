@@ -26,4 +26,10 @@ If the user is unable to use JavaScript, the developer can fall back to preset c
 ```
 This would first result in the warning and then display a preset fact for the user to see rather than a blank display box.
 
+## Other JS: Theme Picker
+
+For theme picker, I adopted a progressive enhancement approach so that if JavaScript is off, the `@media (prefers-color-theme:)` (i.e. system theme) would take over to the user's preferred theme. Building on top of that, by using JavaScript, the theme is successfully able to change from light to dark to system/auto through the radio buttons. This data attribute is saved to the localStorage to be fetched on each webpage, allowing for the selected theme to be used for each part of the website. Unfortunately, this is where it led to flash of unstyled content (FOUC) issues.
+
+I tried to address FOUC by testing the placement of the script at the beginning, middle, and end of my html code and through the .js file itself. I found that placing at the beginning rids of FOUC but prevents the radio buttons from working. I suspect that this is due to the script requiring html content to be in place. Due to this, I decided the best place to put the script was at the bottom. Furthermore,  
+
 
